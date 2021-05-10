@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        input[type="submit"] {
+            margin-top: 50px;
+        }
+        
+        .img_upld {
+            padding: 15px;
+        }
+        
+        input {
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="upload_file.php" method="post" enctype="multipart/form-data">
+        <h2>Choose file:</h2>
+        <div class="img_upld">
+            <input type="file" name="uploads" accept=".jpg, .jpeg, .png" /> <br />
+            <input type="submit" value="Upload" />
+        </div>
+    </form>
+</body>
+
+</html>
