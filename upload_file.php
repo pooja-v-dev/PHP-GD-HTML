@@ -1,3 +1,15 @@
+<style>
+    a{
+        color: #000;
+    }
+    button{
+        float: right;
+        padding: 10px 15px;
+        margin-right: 30%;
+    }
+</style>
+<button><a href="my_file.html">Back</a></button>
+
 <?php
 
 $name = $_FILES["uploads"]["name"];
@@ -54,7 +66,7 @@ if($moveFile != true)
 // ------Resizing image ----------- 
 include_once("upld_fn.php");
 $target = "uploads/$name";
-$resize = "uploads/new_$name".time();
+$resize = "uploads/resized_$name".time();
 
 $max_height = 360; 
 $max_width  = 640;
@@ -65,7 +77,7 @@ upld_fn($target, $resize, $max_width, $max_height, $extension);
 echo "<h2>Original image:-</h2> ";
 echo "<img src='uploads/$name' /> <br/>";
 echo "<h2>Resized image:-</h2> ";
-$img_path = "uploads/new_$name".time();
+$img_path = "uploads/resized_$name".time();
 echo "<img src='$img_path' />"
 
 ?>
